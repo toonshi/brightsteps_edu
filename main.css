@@ -107,6 +107,25 @@ header h1 {
     color: var(--text-color);
 }
 
+.login-section button {
+    width: 100%;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--primary-color);
+    opacity: 0.9;
+}
+
 /* Navigation */
 .category-nav {
     position: sticky;
