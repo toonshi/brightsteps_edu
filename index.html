@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightSteps Educational Videos & Quizzes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <h1>BrightSteps Education</h1>
+        <div id="student-info" class="hidden">
+            <p>Welcome, <span id="student-name"></span> | Grade: <span id="student-grade"></span></p>
+        </div>
+    </header>
+
+    <div class="login-section" id="login-section">
+        <h2>Enter Your Information</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="grade" placeholder="Your Grade">
+        <button onclick="submitStudentInfo()">Start Learning</button>
+    </div>
+
+    <nav class="category-nav">
+        <button class="nav-btn" data-section="math">Mathematics</button>
+        <button class="nav-btn" data-section="science">Science</button>
+        <button class="nav-btn" data-section="english">English</button>
+        <button class="nav-btn" data-section="geography">Geography</button>
+        <button class="nav-btn" data-section="history">History</button>
+    </nav>
+
+    <main>
+        <!-- Mathematics Section -->
+        <section id="math" class="subject-section">
+            <div class="section-header">
+                <h2>Mathematics</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Basic Addition and Subtraction</h3>
+                    <iframe src="https://www.youtube.com/embed/mjlsSYLLOSE" title="Basic Addition and Subtraction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(0)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Multiplication Introduction</h3>
+                    <iframe src="https://www.youtube.com/embed/LE-zR_3LJmE" title="Multiplication Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(1)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Introduction to Fractions</h3>
+                    <iframe src="https://www.youtube.com/embed/N0_TWQTrJ-k" title="Introduction to Fractions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(2)">Take Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Science Section -->
+        <section id="science" class="subject-section">
+            <div class="section-header">
+                <h2>Science</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Introduction to the Solar System</h3>
+                    <iframe src="https://www.youtube.com/embed/nxeMoaxUpWk" title="Introduction to the Solar System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(3)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Introduction to Cells</h3>
+                    <iframe src="https://www.youtube.com/embed/8IlzKri08kk" title="Introduction to Cells" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(4)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Introduction to Chemical Reactions</h3>
+                    <iframe src="https://www.youtube.com/embed/2S6e11NBwiw" title="Introduction to Chemical Reactions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(5)">Take Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- English Section -->
+        <section id="english" class="subject-section">
+            <div class="section-header">
+                <h2>English</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Introduction to Nouns</h3>
+                    <iframe src="https://www.youtube.com/embed/qmWJqd5GUmw" title="Introduction to Nouns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(6)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Introduction to Verbs</h3>
+                    <iframe src="https://www.youtube.com/embed/gQqY9CLVgN8" title="Introduction to Verbs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(7)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Subject Verb Agreement</h3>
+                    <iframe src="https://www.youtube.com/embed/LWuK606tIHY" title="Subject Verb Agreement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(8)">Take Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Geography Section -->
+        <section id="geography" class="subject-section">
+            <div class="section-header">
+                <h2>Geography</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Introduction to Maps</h3>
+                    <iframe src="https://www.youtube.com/embed/dp0QC0qBwQ8" title="Introduction to Maps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(9)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Latitude and Longitude</h3>
+                    <iframe src="https://www.youtube.com/embed/swKBi6hHHMA" title="Latitude and Longitude" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(10)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Scale and Distance</h3>
+                    <iframe src="https://www.youtube.com/embed/RQlfw_qTdTk" title="Scale and Distance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(11)">Take Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="subject-section">
+            <div class="section-header">
+                <h2>History</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Ancient Egypt</h3>
+                    <iframe src="https://www.youtube.com/embed/D-VUIjfzqHk" title="Ancient Egypt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(12)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Ancient Greece</h3>
+                    <iframe src="https://www.youtube.com/embed/IUZKg3KdtYo" title="Ancient Greece" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(13)">Take Quiz</button>
+                </div>
+
+                <div class="video-item">
+                    <h3>Ancient Rome</h3>
+                    <iframe src="https://www.youtube.com/embed/RQXb2wqXQyI" title="Ancient Rome" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="quiz-btn" onclick="startQuiz(14)">Take Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="grand-quiz-section">
+        <button id="grand-quiz-btn" onclick="startGrandQuiz()">Take Final Test</button>
+    </div>
+
+    <div id="quiz-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeQuiz()">&times;</span>
+            <h2 id="quiz-title">Quiz</h2>
+            <div id="quiz-content"></div>
+            <button onclick="submitQuiz()" class="submit-btn">Submit Quiz</button>
+        </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="theme.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

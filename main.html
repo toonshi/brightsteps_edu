@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Videos & Quizzes</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Educational Videos</h1>
+        <div id="student-info" class="hidden">
+            <p>Welcome, <span id="student-name"></span> | Grade: <span id="student-grade"></span></p>
+        </div>
+    </header>
+
+    <div class="login-section" id="login-section">
+        <h2>Enter Your Information</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="grade" placeholder="Your Grade">
+        <button onclick="submitStudentInfo()">Start Learning</button>
+    </div>
+
+    <main class="video-grid">
+        <div class="video-item">
+            <h3>Basic Math Operations</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jyLRpr2P0MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button class="quiz-btn" onclick="startQuiz(0)">Take Quiz</button>
+        </div>
+
+        <div class="video-item">
+            <h3>Multiplication Tables</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/04N79tItPEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button class="quiz-btn" onclick="startQuiz(1)">Take Quiz</button>
+        </div>
+
+        <div class="video-item">
+            <h3>Division Basics</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yWGeFDXgQvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button class="quiz-btn" onclick="startQuiz(2)">Take Quiz</button>
+        </div>
+    </main>
+
+    <div class="grand-quiz-section">
+        <button id="grand-quiz-btn" onclick="startGrandQuiz()">Take Final Test</button>
+    </div>
+
+    <div id="quiz-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeQuiz()">&times;</span>
+            <h2 id="quiz-title">Quiz</h2>
+            <div id="quiz-content"></div>
+            <button onclick="submitQuiz()" class="submit-btn">Submit Quiz</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
